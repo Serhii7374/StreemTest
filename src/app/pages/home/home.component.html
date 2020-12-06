@@ -5,12 +5,18 @@
             <div class="foto" [style.backgroundImage]="'url('+u?.avatar+')'"></div>
         </div>
         <div class="info">
-            <p class="name"></p>
-            <p class="contacts"></p>
-            <p class="role"></p>
+            <p class="name">{{ u.name }}</p>
+            <p class="role">{{ u.role }}</p>
+            <p class="more">More >
+                <span class="test">
+                    {{ "Created At: " + u.createdAt}} <br>
+                    {{ "City: " + u.city }} <br>
+                    {{ "Phone: " + u.phone }}
+                </span>
+            </p>   
         </div>
         <div class="out">
-            <button type="button" id="details">Details</button>
+            <button type="button" id="details" [routerLink]="[ '/article/'+u.id ]">Details</button>
         </div>
         <div class="bottom">
             <a href="#" id="facebook"><i class="uil uil-facebook-f"></i></a>

@@ -1,0 +1,19 @@
+<div class="wrapper">
+    <article>
+        <section *ngFor="let a of Articles; let i = index">
+            <div class="section__img"
+                [style.backgroundImage]="'url('+a.image+')'" ></div>
+            <div class="section__content">
+                <div class="section__title">{{ a.content }}</div>
+                <div class="section__note">
+                    <div class="section__date">
+                        <p></p>{{ a.createdAt }}
+                    </div>
+                    <div class="section__edit">
+                        <p></p>{{ a.editedAt }}
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+</div>

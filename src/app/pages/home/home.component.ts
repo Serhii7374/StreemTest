@@ -14,19 +14,13 @@ export class HomeComponent implements OnInit {
     this.getDate();
   }
 
-
   async getDate() {
     let response = await fetch("https://5fca3e863c1c220016441fcc.mockapi.io/api/v1/users");
 
-    if (response.ok) { // если HTTP-статус в диапазоне 200-299
-      // получаем тело ответа (см. про этот метод ниже)
+    if (response.ok) {
       let json = await response.json();
-
-      // let json = await response.json();
       console.log(json);
-      this.users = json;
-      console.log(typeof(this.users));
-      
+      this.users = json;   
     } else {
       alert("Ошибка HTTP: " + response.status);
     }
