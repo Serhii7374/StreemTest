@@ -1,8 +1,7 @@
 <div class="wrapper">
     <article>
         <section *ngFor="let a of Articles; let i = index">
-            <div class="section__img"
-                [style.backgroundImage]="'url('+a.image+')'" ></div>
+            <div class="section__img" [style.backgroundImage]="'url('+a.image+')'"></div>
             <div class="section__content">
                 <div class="section__title">{{ a.content }}</div>
                 <div class="section__note">
@@ -13,6 +12,12 @@
                         <p>Edited At:</p>{{ a.editedAt | dateparse | date}}
                     </div>
                 </div>
+                <div class="nav">
+                    <div class="edit" (click)="edit()">Edit</div>
+                    <div class="delete" (click)="delete()">Delete</div>
+
+                </div>
+
             </div>
         </section>
     </article>

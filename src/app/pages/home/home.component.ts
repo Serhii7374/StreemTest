@@ -19,7 +19,6 @@ export class HomeComponent implements OnInit {
 
     if (response.ok) {
       let json = await response.json();
-      console.log(json);
       this.users = json;   
     } else {
       alert("Ошибка HTTP: " + response.status);
