@@ -9,7 +9,7 @@
             <p class="role">{{ u.role }}</p>
             <p class="more">More >
                 <span class="test">
-                    {{ "Created At: " + u.createdAt}} <br>
+                    {{ u.createdAt | dateparse | date}} <br>
                     {{ "City: " + u.city }} <br>
                     {{ "Phone: " + u.phone }}
                 </span>

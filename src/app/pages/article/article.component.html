@@ -7,10 +7,10 @@
                 <div class="section__title">{{ a.content }}</div>
                 <div class="section__note">
                     <div class="section__date">
-                        <p></p>{{ a.createdAt }}
+                        <p>Created At:</p>{{ a.createdAt | dateparse | date }}
                     </div>
                     <div class="section__edit">
-                        <p></p>{{ a.editedAt }}
+                        <p>Edited At:</p>{{ a.editedAt | dateparse | date}}
                     </div>
                 </div>
             </div>

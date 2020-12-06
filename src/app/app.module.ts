@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ArticleComponent } from './pages/article/article.component';
 import { HeaderComponent } from './components/header/header.component';
+import { DateparsePipe } from './shared/pipes/dateparse.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ArticleComponent,
-    HeaderComponent
+    HeaderComponent,
+    DateparsePipe
   ],
   imports: [
     BrowserModule,
